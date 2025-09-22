@@ -48,6 +48,12 @@
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            transition: opacity 0.5s;
+        }
+        
+        #login-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
         }
 
         .login-box {
@@ -387,7 +393,7 @@
                     <h2>Centro de Atendimento Policial Militar - COPOM</h2>
                     <p>Análise Criminal - Controle de Homicídios</p>
                 </div>
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAYGBgYHBgcICAcKCwoLCg8ODAwODxYQERAREBYiFRkVFRkVIh4kHhweJB42KiYmKjY+NDI0PkxERExfWl98fKcBBgYGBgcGBwgIBwoLCgsKDw4MDA4PFhAREBEQFiIVGRUVGRUiHiQeHB4kHjYqJCYqNj40MjQ+TERETF9aX3x8p//CABEIAMgAyAMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAAAwQFBgIBB//aAAgBAQAAAAD7gAAAAAAAAAAAAAAAAAAAAAAAAABGq8N9WwAAcNX5npkAAcXXOX6UABxds5lpQAHF2zmWlAAcXbOZaUABxdc5fpQAHDU+Z6YABGq8N9WwAAAAAAAAAAAAAAAAAAAAAAAAB//xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/2gAIAQIQAAAAA+403OADLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgD7jTc4AP/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/9oACAECEAAAAA+403OADLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgD7jTc4AP/8QANRAAAQMCAwUGBgICAwAAAAAAAQACAwQRITESQVEQEyJhcYEUMlKRIjNAUoKhsWKCorLB0f/aAAgBAQABPwD/AOQ49c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/wA2PXN/kP8ANj1z/wCQ/wA2PXN/kP8ANuFxcST1/wAzHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yAh/m3C5xcSet/wDmMfXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/wCQ/wA2PXN/kP8ANuFzi5x6/wDkR7rB/f8A0o91g/v/AKUe6wf3/wBKPdYP7/6Ue6wf3/0o91g/v/pR7rB/f/Sj3WD+/wDpR7rB/f8A0o91g/v/AKUe6wf3/wBKPdYP7/6UEtcHN6Ee9w/3n9KPdYP7/wClHusH9/8ASj3WD+/+lHusH9/9KPcx/wB5/Sj3WD+/+lHusH9/9KPdYP7/AOlHusH9/wDSoLWuDhzB//EABwRAAIDAQEBAQAAAAAAAAAAAAABAhETEiExQf/aAAgBAQABPxA9b/bF48iO2S82z6L+2Lx5Edsl5tn0X9sXjyI7ZLyvX/q/tjwY8CO2z8y9e/7Y8GPIjts/MvXv+2PBjyI7bLz83r/2PAjwI7bLyv/U9b/bF48iO2S82z6L+2Lx5Edsl5tn0X9sXjyI7ZLyvX/q/tjwY8CO2z8y9e/7Y8GPIjts/MvXv+2PBjyI7bLz83r/2PAjwI7bLyv8A1Pr8UvF4v8Xil+C/xS8X+LxS/Bf4peL/ABeKX4L/ABS8X+LxS/Bf4peL/F4pfgv8UvF/i8UvwX+KXi/xeKX4L/FLxf4vFL8F/il4v8Xil+C/xS8X+LxS/Bf/xAAmEAEAAgIBBAEFAQEBAAAAAAABABEhMUFRYXEQgSCRoTCxwfDB4f/aAAgBAQABPyH7iYf+R//Z" alt="Logo 3ª CRPM">
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAYGBgYHBgcICAcKCwoLCg8ODAwODxYQERAREBYiFRkVFRkVIh4kHhweJB42KiYmKjY+NDI0PkxERExfWl98fKcBBgYGBgcGBwgIBwoLCgsKDw4MDA4PFhAREBEQFiIVGRUVGRUiHiQeHB4kHjYqJCYqNj40MjQ+TERETF9aX3x8p//CABEIAMgAyAMBIgACEQEDEQH/xAAbAAEBAAMBAQEAAAAAAAAAAAAAAwQFBgIBB//aAAgBAQAAAAD7gAAAAAAAAAAAAAAAAAAAAAAAAABGq8N9WwAAcNX5npkAAcXXOX6UABxds5lpQAHF2zmWlAAcXbOZaUABxdc5fpQAHDU+Z6YABGq8N9WwAAAAAAAAAAAAAAAAAAAAAAAAB//xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQIDBAX/2gAIAQIQAAAAA+403OADLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgD7jTc4AP/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/9oACAECEAAAAA+403OADLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgDLWWWgD7jTc4AP/8QANRAAAQMCAwUGBgICAwAAAAAAAQACAwQRITESQVEQEyJhcYEUMlKRIjNAUoKhsWKCorLB0f/aAAgBAQABPwD/AOQ49c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/zY9c3+Q/wA2PXN/kP8ANj1z/wCQ/wA2PXN/kP8ANuFxcST1/wAzHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yH+bHrm/yAh/m3C5xcSet/wDmMfXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP82PXN/kP8ANuFzi5x6/wDkR7rB/f8A0o91g/v/AKUe6wf3/wBKPdYP7/6Ue6wf3/0o91g/v/pR7rB/f/Sj3WD+/wDpR7rB/f8A0o91g/v/AKUe6wf3/wBKPdYP7/6UEtcHN6Ee9w/3n9KPdYP7/wClHusH9/8ASj3WD+/+lHusH9/9KPcx/wB5/Sj3WD+/+lHusH9/9KPdYP7/AOlHusH9/wDSoLWuDhzB//EABwRAAIDAQEBAQAAAAAAAAAAAAABAhETEiExQf/aAAgBAQABPxA9b/bF48iO2S82z6L+2Lx5Edsl5tn0X9sXjyI7ZLyvX/q/tjwY8CO2z8y9e/7Y8GPIjts/MvXv+2PBjyI7bLz83r/2PAjwI7bLyv/U9b/bF48iO2S82z6L+2Lx5Edsl5tn0X9sXjyI7ZLyvX/q/tjwY8CO2z8y9e/7Y8GPIjts/MvXv+2PBjyI7bLz83r/2PAjwI7bLyv8A1Pr8UvF4v8Xil+C/xS8X+LxS/Bf4peL/ABeKX4L/ABS8X+LxS/Bf4peL/F4pfgv8UvF/i8UvwX+KXi/xeKX4L/FLxf4vFL8F/il4v8Xil+C/xS8X+LxS/Bf/xAAmEAEAAgIBBAEFAQEBAAAAAAABABEhMUFRYXEQgSCRoTCxwfDB4f/aAAgBAQABPyH7iYf+R//Z" alt="Logo 3ª CRPM">
             </header>
             
             <div id="loading-message">Carregando dados da planilha...</div>
@@ -453,7 +459,6 @@
         // Variáveis globais
         let fullData = [];
         const chartInstances = {};
-        // URL da sua planilha Google Sheets publicada como CSV
         const googleSheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRaVwtuyh-PxPwjA6yZ5twRF4xamo5UrlEmh5zo4BldYtNZfpJ9u-4xfg7f11uEbA/pub?output=csv';
 
         // Configurações globais do Chart.js
@@ -463,6 +468,21 @@
         Chart.defaults.maintainAspectRatio = false;
 
         document.addEventListener('DOMContentLoaded', () => {
+            // --- LÓGICA DE LOGIN PERSISTENTE ---
+            if (sessionStorage.getItem('isLoggedIn') === 'true') {
+                const loginScreen = document.getElementById('login-screen');
+                loginScreen.classList.add('hidden');
+                setTimeout(() => { loginScreen.style.display = 'none'; }, 500);
+
+                const dashboardContainer = document.getElementById('dashboard-container');
+                dashboardContainer.style.display = 'flex';
+                loadDataAndStartDashboard();
+            } else {
+                setupLoginForm();
+            }
+        });
+
+        function setupLoginForm() {
             const loginForm = document.getElementById('login-form');
             loginForm.addEventListener('submit', function(event) {
                 event.preventDefault();
@@ -471,26 +491,46 @@
                 const errorP = document.getElementById('login-error');
 
                 if (username === 'analisecriminal' && password === 'homicidios3risp') {
-                    document.getElementById('login-screen').style.display = 'none';
+                    // Salva o estado de login na sessão do navegador
+                    sessionStorage.setItem('isLoggedIn', 'true');
+
+                    const loginScreen = document.getElementById('login-screen');
+                    loginScreen.classList.add('hidden');
+                    setTimeout(() => { loginScreen.style.display = 'none'; }, 500);
+
                     const dashboardContainer = document.getElementById('dashboard-container');
                     dashboardContainer.style.display = 'flex';
-                    loadDataAndInitializeDashboard();
+                    loadDataAndStartDashboard();
                 } else {
                     errorP.textContent = 'Usuário ou senha inválidos.';
                 }
             });
-        });
+        }
+        
+        // --- LÓGICA DE CARREGAMENTO E ATUALIZAÇÃO DE DADOS ---
+        function loadDataAndStartDashboard() {
+            // Carrega os dados pela primeira vez
+            fetchAndRefreshDashboard();
+            
+            // Configura a atualização automática a cada 1 minuto (60000 milissegundos)
+            setInterval(fetchAndRefreshDashboard, 60000); 
+        }
 
-        function loadDataAndInitializeDashboard() {
+        function fetchAndRefreshDashboard() {
+            console.log("Verificando atualizações na planilha...");
             const loadingMessage = document.getElementById('loading-message');
+            const dashboardContent = document.querySelector('.dashboard-content');
             
             Papa.parse(googleSheetUrl, {
                 download: true,
                 header: true,
+                skipEmptyLines: true,
                 complete: function(results) {
-                    loadingMessage.style.display = 'none';
-                    document.querySelector('.dashboard-content').style.display = 'block';
-                    initializeDashboard(results.data);
+                    if (loadingMessage.style.display !== 'none') {
+                        loadingMessage.style.display = 'none';
+                        dashboardContent.style.display = 'block';
+                    }
+                    updateUI(results.data);
                 },
                 error: function(error) {
                     loadingMessage.textContent = 'Erro ao carregar os dados. Verifique a URL da planilha e a sua conexão.';
@@ -498,28 +538,29 @@
                 }
             });
         }
-
-        function initializeDashboard(rawData) {
-            try {
-                fullData = processData(validateData(rawData));
+        
+        let isFirstLoad = true;
+        function updateUI(rawData) {
+             fullData = processData(validateData(rawData));
+            
+             if (isFirstLoad) {
                 populateFilters();
                 setupEventListeners();
-                updateDashboard();
-            } catch (error) {
-                console.error('Falha ao inicializar o dashboard:', error);
-                alert('Ocorreu um erro ao carregar o dashboard.');
-            }
+                isFirstLoad = false;
+             }
+             
+             updateDashboard();
         }
-        
+
         function processData(data) {
              return data.map(row => {
                 const dateParts = row['DATA DO FATO'] ? String(row['DATA DO FATO']).split('/') : null;
                 const date = dateParts && dateParts.length === 3 ? new Date(parseInt(dateParts[2]), parseInt(dateParts[1]) - 1, parseInt(dateParts[0])) : null;
                 
-                let resolucaoNormalizada = 'Não';
+                let resolucaoNormalizada = 'Pendente';
                 const situacao = (row['SITUAÇÃO ATUAL'] || '').toLowerCase();
                 if (situacao.includes('resolvido')) {
-                    resolucaoNormalizada = 'Sim';
+                    resolucaoNormalizada = 'Resolvido';
                 }
 
                 return {
@@ -604,7 +645,7 @@
 
         function updateKPIs(data) {
             const total = data.length;
-            const resolvidos = data.filter(d => d.ResoluçãoNormalizada === 'Sim').length;
+            const resolvidos = data.filter(d => d.ResoluçãoNormalizada === 'Resolvido').length;
             const taxaResolucao = total > 0 ? ((resolvidos / total) * 100).toFixed(1) + '%' : '0%';
 
             document.getElementById('kpi-total').textContent = total;
@@ -677,7 +718,6 @@
             let labels = Object.keys(counts);
             let colors = chartColors;
             if (isResolution) {
-                labels = labels.map(l => l === 'Sim' ? 'Resolvido' : 'Pendente');
                 colors = labels.map(l => l.includes('Resolvido') ? '#2ecc71' : '#e74c3c');
             }
             renderChart(canvasId, 'pie', {
@@ -723,7 +763,7 @@
             const unitData = data.reduce((acc, curr) => {
                 const unit = curr[key] || 'Não Informada';
                 if (!acc[unit]) acc[unit] = { resolved: 0, pending: 0 };
-                curr.ResoluçãoNormalizada === 'Sim' ? acc[unit].resolved++ : acc[unit].pending++;
+                curr.ResoluçãoNormalizada === 'Resolvido' ? acc[unit].resolved++ : acc[unit].pending++;
                 return acc;
             }, {});
             
